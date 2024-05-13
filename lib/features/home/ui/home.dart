@@ -1,7 +1,6 @@
 import 'package:e_commerce_bag/features/home/model/bag_model.dart';
 import 'package:e_commerce_bag/features/home/ui/widgets/category_tile.dart';
 import 'package:flutter/material.dart';
-
 import 'banners.dart';
 
 class Home extends StatefulWidget {
@@ -26,7 +25,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Evaly'),
+        title: const Text('Evaly',style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
         actions: const [
           Padding(
             padding: EdgeInsets.all(12.0),
