@@ -30,12 +30,11 @@ class ProductTile extends StatelessWidget {
           )
         ],
       ),
-      body: ListView.builder(
-          itemCount: bag.length,
-          itemBuilder: (context, index) {
-            final product = bag[index];
-            return GridView.count(
+      body: GridView.count(
               crossAxisCount: 2,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              childAspectRatio: 0.8,
               children: List.generate(
                   bag.length,
                   (index) => Container(
@@ -46,16 +45,16 @@ class ProductTile extends StatelessWidget {
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image:
-                                          NetworkImage(product.productImg!))),
+                                          NetworkImage(bag[index].productImg!))),
                             ),
-                            Text(product.productName!),
-                            Text(product.productDesc!),
-                            Text(product.productPrice!),
+                            Text(bag[index].productName!),
+                            Text(bag[index].productDesc!),
+                            Text(bag[index].productPrice!),
                           ],
                         ),
-                      )),
-            );
-          }),
+                      ),
+    ),
+    ),
     );
   }
 }
